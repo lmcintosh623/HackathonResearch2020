@@ -14,22 +14,12 @@ soup2018 = BeautifulSoup(page_data_2018, 'html.parser')             #soup2018 ob
 page_data_2019 = requests.get('https://mlh.io/seasons/na-2019/events').text
 soup2019 = BeautifulSoup(page_data_2019, 'html.parser')             #soup2019 object used to view 2019 Hackathons
 
-
-def decodeEmail(e):
-    de = ""
-    k = int(e[:2], 16)
-
-    for i in range(2, len(e)-1, 2):
-        de += chr(int(e[i:i+2], 16)^k)
-
-    return de
-
 # Example input
 # <h3 class="event-name" itemprop="name">Hackital</h3>
 
 hackathonCount = 0
 hackathons = []
-regexPattern = ' ?\[e'  #regex expression for matching BeautifulSoup Email problem
+regexPattern = ' ?\[e'  #regex expression for matching BeautifulSoup Email problem - Matches of the form' [e'
 f = open('log1.txt', 'w')   #used for wirint data to output file.
 
 print("==========2018 Hackathons========== ")
@@ -66,6 +56,6 @@ print(str(hackathonCount) + " hackathons in 2018 and 2019 lists total")
 
               
 
-                                #   PHASE 2 - devpost.com
+#   PHASE 2 - devpost.com
 
 

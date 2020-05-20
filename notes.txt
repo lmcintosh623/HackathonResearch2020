@@ -1,0 +1,40 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------
+-
+-	Notes for meeting with Hardin about 2nd web script (mlh hackathon names --> devpost)
+-
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+----> [email\xa0protected] scraping problem with BeautifulSoup
+	--> Current implementation of script disregards and hackathon with the event-name variable equal to something of the form:
+		a. string@string
+		b. Hack@ The House!
+		c. "Hack@CEWIT" vs "Hack @ CEWIT" (which actually made the list
+	--> for 2019 and 2018 hacks was 339, now is 337
+
+----> How to accurately and consistently navigate to corresponding devpost site
+	--> Cant simply put in name like "byteHacks2018.devpost.com/submissions
+		a. doesn't work for all hackathons
+		b. Some hackathon titles begin with year, then name. Some hackathons don't include years at all in their event name
+		c. How to query devpost to get the top result guaranteed to be the hackathon from mlh.io list
+	--> If we solve this, then the script is done. It is just a matter of plugging it up and saving github links
+
+
+-----> Next step, I am working on grabbing the github/gitlab link from an individual page example which should be the same for other page formattings
+	--> Have developed a script that reliably grabs submission URLs from given Devpost Hackathon page
+
+
+
+
+
+DELIVERABLE ADVICE:
+
+-charts only, little data analysis
+
+-better option: begin writing a paper
+	a) methods- describe what you dide, how you did it, ect
+	b) results- Say what you found and where you found it and this is what I found
+	
+-Better Better option: Literature review
+	a) Textualize what I was doing fo this project, disucss Dr, Hardin's dissertation, provide analysis and discussion of ideas preseted in results section.
+	b) Formal research paper (probably not a realistic goal)
