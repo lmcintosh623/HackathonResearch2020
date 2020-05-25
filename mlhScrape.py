@@ -20,7 +20,7 @@ soup2019 = BeautifulSoup(page_data_2019, 'html.parser')             #soup2019 ob
 hackathonCount = 0
 hackathons = []
 regexPattern = ' ?\[e'  #regex expression for matching BeautifulSoup Email problem - Matches of the form' [e'
-f = open('log1.txt', 'w')   #used for wirint data to output file.
+
 
 print("==========2018 Hackathons========== ")
     #stores hackathon names from 2018  
@@ -46,6 +46,7 @@ for h3 in soup2019.findAll('h3', { 'class' : 'event-name'}):
 print("---------->" + str(hackathonCount-temp) + " hackathons from 2019<----------")
 
 
+f = open('hackathonNames.txt', 'w')   #used for wirint data to output file.
 for hack in hackathons:
     f.write(str(hack)[2:-2] + '\n')
 f.close()
