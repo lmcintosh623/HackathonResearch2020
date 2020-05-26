@@ -8,9 +8,8 @@ import sys
 import re
 from bs4 import BeautifulSoup
 
-def notInList(argument):
-    not_in_list = argument not in finalList
-    print(str(not_in_list) + " value --> " + argument)
+def notInList(argument):                    #Used to determine whether the name is a distinct name or not
+    not_in_list = argument not in hackathons
     return not_in_list
 
 page_data_2018 = requests.get('https://mlh.io/seasons/na-2018/events').text
@@ -23,8 +22,9 @@ soup2019 = BeautifulSoup(page_data_2019, 'html.parser')             #soup2019 ob
 
 hackathonCount = 0
 hackathons = []
-finalList = []
 regexPattern = ' ?\[e'  #regex expression for matching BeautifulSoup Email problem - Matches of the form' [e'
+f = open('hackathonNames.txt', 'w')   #used for wirint data to output file.
+
 
     #stores hackathon names from 2018  
 for h3 in soup2018.findAll('h3', { 'class' : 'event-name'}):
@@ -32,8 +32,11 @@ for h3 in soup2018.findAll('h3', { 'class' : 'event-name'}):
         pass
     else:
         nameStr = [h3.text.strip()]
-        hackathons.append(nameStr)
-        hackathonCount += 1
+        if notInList(str(nameStr)[2:-2] +'\n'):
+            hackathons.append(str(nameStr)[2:-2]+'\n')
+            f.write(str(nameStr)[2:-2]+'\n')
+            hackathonCount += 1
+
 
     #stores hackathon names from 2019
 for h3 in soup2019.findAll('h3', { 'class' : 'event-name'}):
@@ -41,23 +44,12 @@ for h3 in soup2019.findAll('h3', { 'class' : 'event-name'}):
         pass
     else:
         nameStr = [h3.text.strip()]
-        hackathons.append(nameStr)
-        hackathonCount += 1
-
-
-f = open('hackathonNames.txt', 'w')   #used for wirint data to output file.
-for hack in hackathons:
-    if notInList(str(hack)[2:-2]+'\n'):
-        f.write(str(hack)[2:-2] + '\n')
-        finalList.append(str(hack)[2:-2] + '\n')
+        if notInList(str(nameStr)[2:-2] +'\n'):
+            hackathons.append(str(nameStr)[2:-2]+'\n')
+            f.write(str(nameStr)[2:-2]+'\n')
+            hackathonCount += 1
 f.close()
 
 print(str(hackathonCount) + " hackathons in 2018 and 2019 lists total")
-
-    
-
-              
-
-#   PHASE 2 - devpost.com
 
 
