@@ -54,13 +54,22 @@ from bs4 import BeautifulSoup
 #   USE THE ABOVE TABLE TO TRANSLATE THE NAMES IN HACKATHON.TXT AND INSERT INTO URLS
 
 def translateToURLFormat():
-    f.open("devpostURLS.txt", "w")
-    with open("hackathonNames.txt", "r") as tmp:
-        for line in tmp:
+    f = open("devpostURLS.txt", "w")
+    outputURL = "https://devpost.com/hackathons?utf8=%E2%9C%93&search=INSERTSEARCHHERE&challenge_type=all&sort_by=Recently+Added"
+    with open("hackathonNames.txt", "r") as nameList:
+        for line in nameList:
             temp = line.strip()
-            #print("OGString: " + temp + ",   returned string: " + processName(temp))
-
-            line = tmp.readline()
+            #print("OGString: " + temp)
+            temp = processName(temp)
+            #print("Returned string: " + temp)
+            f.write(outputURL.replace("INSERTSEARCHHERE", temp,1)+"\n")
+            line = nameList.readline()
+    f.close()
+    with open("devpostURLS.txt", "r") as url:
+        counter = 1 
+        for href in url:
+            print("Line: {}, href = {} ".format(counter, href))
+            counter += 1
 
 def processName(argument):
     for crctr in argument:
