@@ -81,7 +81,6 @@ Hack Arizona
 HackFRee
 nwHacks
 CruzHacks
-PennApps
 SB Hacks IV
 SpartaHack IV
 SwampHacks
@@ -132,37 +131,24 @@ RevolutionUC
 StarterHacks
 HackTJ
 SF Hacks
-HackGSU
-HackISU
 HackNYU
 Hack.UVA
 Los Altos Hacks III
-HackPrinceton
 LA Hacks
 CUHacking
 Bitcamp 2018
 Digital Women Code Camp
-hackNY
-HackPSU
 LingHacks
 PerkinsHacks
 BuildHer
 BeachHacks
 Citrus Hack
-HackRU
-HackUMBC
 MasseyHacks IV
 Hack the 6ix 2018
-HackMTY
 ByteHacks
-MedHacks
 MXHacks
-PennApps
-HackTheU
 HackRice 8
-Hack the North
 SBU Hacks
-ShellHacks
 Hophacks
 Lumohacks
 BASEHacks 3.0
@@ -171,149 +157,88 @@ Ram Hacks
 Volhacks
 HackNY
 Mining hack
-HackGSU
-HackNC
 Hack This. Help Kids.
-HackPSU
-HackRU
-HackUIowa
-HackUTA
 HAkron 3000
 HackCooper
 HackUMass
 MHacks
 PatriotHacks
-SD Hacks
-TigerHacks
 EastHacks
 HackDuke
-BigRed//Hacks
-BoilerMake
-HackGT
 HackHarvard College
-HackISU
 Hack KState
-Kent Hack Enough
-DemonHacks
-DubHacks
-HackTX
-HackUMBC
 HyphenHacks
 Power the Future
 Cal Hacks 5.0
-Electric City Hacks
-HackHolyoke
-VandyHacks
 WHACK (Wellesley Hacks)
 CodeRED Discovery
 HackBI II
 HackNJIT
 hackPHS
-HealthHacks
-UB Hacking
-HackPrinceton
 sunhacks
-BostonHacks
 Codestellation
 HackMCST
 HackWITUs
-MadHacks
-Technica
-HackUSU
 Lehman Hack50
 BlocHacks
 SacHacks
 Hack Western V
-YHack
 Urban Hacks
 SB Hacks
 StarterHacks 2019
 CruzHacks 2019
 SpartaHack V
-SwampHacks
 UofTHacks
 Hackatown
 HackED
-HackFRee
 Rose Hack
 <womxn/hacks>
 ConUHacks IV
 CUhackit
 DeltaHacks
 EarthHacks
-nwHacks
-TAMUhack
 ElleHacks
-Hoya Hacks
-MangoHacks
-QHacks
-SLO Hacks
 AuburnHacks
-MakeHarvard
 McHacks 6
-MinneHack
-PennApps
 CalvinHacks
 Hack KU
 Sheridan Hackville
 UGAHacks 4
-HackDavis
 HackHer413
-Hacklahoma
-HackRiddle
-uOttaHack
 XdHacks
 HackCWRU 6
-HackNYU
-HopHacks
 TreeHacks
 VT Hacks VI
-BrickHack
 cuHacking
 HackHERS
 MakeUofT
 Pearl Hacks
-Uncommon Hacks
 Hack the Valley III
-CrimsonCode
 HackCU
 HackTCNJ
 HackUTD
 Hack DHI
-HackMerced
-Hacktech
-Knight Hacks
 PickHacks
 Steelhacks
 HACK AE 2019
 HooHacks
-RevolutionUC
 SF Hacks 2019
-WiCHacks
 cmdf
 Hacklassonde
-HackRU
 MenloHacks
 Profhacks
-HackPSU
-HackRPI
 Cypher V
-Hackital
 TechTogether Boston
 CrimsonHacks
 Hackabull
 Los Altos Hacks
 MasseyHacks
-HackGSU
 Hack Puebla
-LA Hacks
 CatHacks
 HackWCU
 LingHacks II
-AthenaHacks
 HackDartmouth
 hackMHS
-HackTJ
 HackUNT
 HackXX
 HatterHacks
@@ -326,9 +251,7 @@ Hack the Heights
 KleinHacks
 PackHacks
 RowdyHacks
-BeachHacks
 DragonHacks 2019
-Citrus Hack
 PoliHacks
 PC Hacks
 RU Hacks 2019
