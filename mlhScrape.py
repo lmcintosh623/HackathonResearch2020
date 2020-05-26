@@ -8,6 +8,10 @@ import sys
 import re
 from bs4 import BeautifulSoup
 
+def notInList(argument):
+    not_in_list = argument not in finalList
+    print(str(not_in_list) + " value --> " + argument)
+    return not_in_list
 
 page_data_2018 = requests.get('https://mlh.io/seasons/na-2018/events').text
 soup2018 = BeautifulSoup(page_data_2018, 'html.parser')             #soup2018 object used to view 2018 Hackathons 
@@ -19,10 +23,9 @@ soup2019 = BeautifulSoup(page_data_2019, 'html.parser')             #soup2019 ob
 
 hackathonCount = 0
 hackathons = []
+finalList = []
 regexPattern = ' ?\[e'  #regex expression for matching BeautifulSoup Email problem - Matches of the form' [e'
 
-
-print("==========2018 Hackathons========== ")
     #stores hackathon names from 2018  
 for h3 in soup2018.findAll('h3', { 'class' : 'event-name'}):
     if (re.match(regexPattern, str(h3.text))):
@@ -31,11 +34,8 @@ for h3 in soup2018.findAll('h3', { 'class' : 'event-name'}):
         nameStr = [h3.text.strip()]
         hackathons.append(nameStr)
         hackathonCount += 1
-print("---------->" + str(hackathonCount) + " hackathons from 2018<----------")
-temp = hackathonCount
 
     #stores hackathon names from 2019
-
 for h3 in soup2019.findAll('h3', { 'class' : 'event-name'}):
     if (re.match(regexPattern, str(h3.text))):
         pass
@@ -43,12 +43,13 @@ for h3 in soup2019.findAll('h3', { 'class' : 'event-name'}):
         nameStr = [h3.text.strip()]
         hackathons.append(nameStr)
         hackathonCount += 1
-print("---------->" + str(hackathonCount-temp) + " hackathons from 2019<----------")
 
 
 f = open('hackathonNames.txt', 'w')   #used for wirint data to output file.
 for hack in hackathons:
-    f.write(str(hack)[2:-2] + '\n')
+    if notInList(str(hack)[2:-2]+'\n'):
+        f.write(str(hack)[2:-2] + '\n')
+        finalList.append(str(hack)[2:-2] + '\n')
 f.close()
 
 print(str(hackathonCount) + " hackathons in 2018 and 2019 lists total")
