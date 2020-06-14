@@ -59,11 +59,10 @@ def translateToURLFormat():
     with open("hackathonNames.txt", "r") as nameList:
         for line in nameList:
             temp = line.strip()
-            #print("OGString: " + temp)
+            print("Hackathon Name: " + temp)
             temp = processName(temp)
-            #print("Returned string: " + temp)
+            print("Returned string: " + temp)
             f.write(outputURL.replace("INSERTSEARCHHERE", temp,1)+"\n")
-            line = nameList.readline()
     f.close()
     with open("devpostURLS.txt", "r") as url:
         counter = 1 
