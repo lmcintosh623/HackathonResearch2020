@@ -1,7 +1,6 @@
 import requests
 import sys
 import re
-from bs4 import BeautifulSoup
 
 res = open("projectLinksScraped.txt", "w")
 
