@@ -22,6 +22,7 @@ def monthDict(argument):
 
 githubLinks = open("GithubLinksScraped.txt", "r")
 dateDifferenceData = []
+max = 0
 
 fullList = githubLinks.read().split()
 for i in range(len(fullList)):
@@ -60,9 +61,13 @@ for i in range(len(fullList)):
             difference = date1 - date2
             dateDifferenceData.append(difference.days)
             #print("Difference in number of days: " + str(difference.days))
-
+            if(difference.days > max):
+                max = difference.days
+                print("New Max Difference: " + str(max))
+                #print("First date: " + str(month1) + "/" + str(day1) + "/" + str(year1))
+                #print("Second date: " + str(month2) + "/" + str(day2) + "/" + str(year2))
         else:
-            print("case 2")
+            #print("case 2")
             month1 = monthDict(str(commitList[0])[0:3])
             if(month1 == "Invalid Month"):
                 print("Invalid month, breaking from program")
@@ -89,6 +94,11 @@ for i in range(len(fullList)):
             difference = date1 - date2
             dateDifferenceData.append(difference.days)
             #print("Difference in number of days: " + str(difference.days))
+            if(difference.days > max):
+                max = difference.days
+                print("New Max Difference: " + str(max))
+                #print("First date: " + str(month1) + "/" + str(day1) + "/" + str(year1))
+                #print("Second date: " + str(month2) + "/" + str(day2) + "/" + str(year2))
     else:
         #Return 0 as there is only one commit date
         #print("ONE ARG CASE")
