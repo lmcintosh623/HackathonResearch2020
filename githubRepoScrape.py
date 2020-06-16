@@ -10,7 +10,7 @@ def individualProject(argument):
     project = requests.get(str(argument.strip())).text
     links = re.findall(reg, str(project))
     for i in range(len(links)):
-        res.write(links[i] + "\n")
+        res.write(links[i])
 
 def scrapeProjectLinks(argument):
     reg = "<a class=\"block-wrapper-link fade link-to-software\" href=\"(.*?)\">"
